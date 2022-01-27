@@ -40,7 +40,7 @@
       <link href="/2022/01/20/special-inputs-in-computer/"/>
       <url>/2022/01/20/special-inputs-in-computer/</url>
       
-        <content type="html"><![CDATA[<ul><li>数值型<ul><li>数超过范围，过大或者过小</li><li>非数值型</li></ul></li><li>参数型<ul><li>提供的参数数量过多</li><li>提供的参数数量过少</li><li>提供重复的参数</li></ul></li><li>字符型<ul><li>提供有特殊含义的字符，比如html中的<code>&gt;</code></li></ul></li></ul>]]></content>
+        <content type="html"><![CDATA[<ul><li>数值型<ul><li>数超过范围，过大或者过小</li><li>非数值型</li></ul></li><li>参数型<ul><li>提供的参数数量过多</li><li>提供的参数数量过少</li><li>提供重复的参数</li></ul></li><li>字符型<ul><li>提供有特殊含义的字符，比如html中的<code>&gt;</code></li></ul></li></ul><p><img src="/special-inputs-in-computer/image-20220127172015881.png" alt="image-20220127172015881"></p>]]></content>
       
       
       <categories>
