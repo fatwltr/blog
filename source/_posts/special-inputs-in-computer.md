@@ -2,7 +2,7 @@
 title: special_inputs_in_computer
 date: 2022-01-20 21:08:45
 categories: personal thinking
-cover: https://wallhaven.cc/w/4gv3kq
+cover: https://w.wallhaven.cc/full/4g/wallhaven-4gv3kq.jpg
 tags:
 ---
 
